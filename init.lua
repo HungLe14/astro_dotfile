@@ -64,23 +64,7 @@ return {
       -- make sure to change the value of `timeoutlen` if it's not triggering correctly, see https://github.com/tpope/vim-surround/issues/117
       setup = function() vim.o.timeoutlen = 500 end
     },
-    {
-      'akinsho/git-conflict.nvim',
-      version = "*",
-      config = function()
-        require('git-conflict').setup({
-          {
-            default_mappings = false,    -- disable buffer local mapping created by this plugin
-            disable_diagnostics = false, -- This will disable the diagnostics in a buffer whilst it is conflicted
-            highlights = {
-              -- They must have background color, otherwise the default color will be used
-              incoming = 'DiffText',
-              current = 'DiffAdd'
-            }
-          }
-        })
-      end
-    }
+    {'akinsho/git-conflict.nvim', version = "*", config = true}
     
   },
 
